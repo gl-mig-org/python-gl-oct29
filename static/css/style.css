@@ -1,0 +1,35 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+.container { width: 100%; max-width: 420px; text-align: center; color: #fff; }
+h1 { margin-bottom: 20px; }
+
+.search { display: flex; gap: 8px; margin-bottom: 20px; }
+.search input { flex: 1; padding: 12px; border: none; border-radius: 8px; font-size: 16px; }
+.search button {
+  padding: 12px 18px; border: none; border-radius: 8px;
+  background: #1e3a8a; color: #fff; cursor: pointer; font-size: 16px;
+}
+.search button:hover { background: #172e6e; }
+
+.error { background: #fee2e2; color: #b91c1c; padding: 10px; border-radius: 8px; }
+
+.card {
+  background: rgba(255, 255, 255, 0.95); color: #1f2937;
+  border-radius: 16px; padding: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+.card .icon { font-size: 64px; }
+.card .temp { font-size: 48px; font-weight: bold; }
+.card .desc { font-size: 18px; margin-bottom: 12px; color: #4b5563; }
+.card ul { list-style: none; margin-bottom: 12px; }
+.card li { padding: 4px 0; }
+.card small { color: #9ca3af; }
