@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>🌍 Weather Finder</h1>
+
+  <form method="POST" class="search">
+    <input type="text" name="city" placeholder="Enter city name..." required>
+    <button type="submit">Search</button>
+  </form>
+
+  {% if error %}
+    <p class="error">{{ error }}</p>
+  {% endif %}
+
+  {% if weather %}
+    <div class="card">
+      <h2>{{ weather.city }}, {{ weather.country }}</h2>
+      <div class="icon">{{ weather.icon }}</div>
+      <p class="temp">{{ weather.temperature }}°C</p>
+      <p class="desc">{{ weather.description }}</p>
+      <ul>
+        <li>Feels like: {{ weather.feels_like }}°C</li>
+        <li>Humidity: {{ weather.humidity }}%</li>
+        <li>Wind: {{ weather.wind_speed }} km/h</li>
+      </ul>
+      <small>Updated: {{ weather.time }}</small>
+    </div>
+  {% endif %}
+{% endblock %}
